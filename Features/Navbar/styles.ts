@@ -44,6 +44,12 @@ const useStyles = createStyles((theme) => ({
   linkLabel: {
     marginRight: 5,
   },
+  container: {
+    position: "sticky",
+    top: 0,
+    left: 0,
+    backgroundColor: "white",
+  },
 }));
 
 export default useStyles;

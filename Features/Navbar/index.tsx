@@ -1,16 +1,10 @@
-import {
-  createStyles,
-  Header,
-  Container,
-  Group,
-  Button,
-  Burger,
-} from "@mantine/core";
+import { Header, Container, Group, Button, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons";
 import { HeaderActionProps } from "./index.types";
 import NavItems from "./Components/NavItems";
 import useStyles from "./styles";
+import Logo from "./Components/Logo";
 const HEADER_HEIGHT = 60;
 
 function Navbar(props: HeaderActionProps) {
@@ -18,7 +12,12 @@ function Navbar(props: HeaderActionProps) {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={120}>
+    <Header
+      className={classes.container}
+      height={HEADER_HEIGHT}
+      sx={{ borderBottom: 0 }}
+      mb={120}
+    >
       <Container className={classes.inner} fluid>
         <Group>
           <Burger
@@ -27,6 +26,7 @@ function Navbar(props: HeaderActionProps) {
             className={classes.burger}
             size="sm"
           />
+          <Logo />
         </Group>
         <Group spacing={5} className={classes.links}>
           <NavItems {...props} />
