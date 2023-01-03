@@ -1,6 +1,7 @@
 export interface HeaderActionProps {
   links: {
-    link: string;
+    scroll?: number;
+    link?: string;
     label: string;
   }[];
 }

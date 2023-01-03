@@ -2,23 +2,23 @@ import { HeaderActionProps } from "Features/Navbar/index.types";
 export const NavLinks: HeaderActionProps = {
   links: [
     {
-      link: "/about",
-      label: "Features",
+      label: "Home",
+      scroll: 200,
     },
     {
-      link: "#1",
-      label: "Learn",
+      label: "Skills",
+      scroll: 500,
     },
     {
-      link: "/about",
-      label: "About",
+      label: "Projects",
+      scroll: 800,
     },
     {
-      link: "/pricing",
+      scroll: 1200,
       label: "Pricing",
     },
     {
-      link: "#2",
+      scroll: 1500,
       label: "Support",
     },
   ],

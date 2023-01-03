@@ -678,6 +678,11 @@
   "resolved" "https://registry.npmjs.org/@tiptap/extension-heading/-/extension-heading-2.0.0-beta.209.tgz"
   "version" "2.0.0-beta.209"
 
+"@tiptap/extension-highlight@^2.0.0-beta.209":
+  "integrity" "sha512-uy0Zu1dU2VcozvqpECb7+mxiazxstlb6w7jQQx8n4PAwIfN2LGv1UIil+VKRkc9amjBVwz+knm9psXEeJfjiBw=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-highlight/-/extension-highlight-2.0.0-beta.209.tgz"
+  "version" "2.0.0-beta.209"
+
 "@tiptap/extension-history@^2.0.0-beta.209":
   "integrity" "sha512-P5nw+r47gBdac4igeaBvW6gxsZUnS67SRgbAyQSmXVe45NXc1t0EUb2Be9YuHRKDVxhJUhGT8NawPY70Fgk4mQ=="
   "resolved" "https://registry.npmjs.org/@tiptap/extension-history/-/extension-history-2.0.0-beta.209.tgz"
@@ -720,9 +725,29 @@
   "resolved" "https://registry.npmjs.org/@tiptap/extension-strike/-/extension-strike-2.0.0-beta.209.tgz"
   "version" "2.0.0-beta.209"
 
+"@tiptap/extension-subscript@^2.0.0-beta.209":
+  "integrity" "sha512-pK2hWCIDoWuPc/GtTSQlAR8YHVyJV6U/g80kc4T/B2FPO/lmkd1jxXemArZf8lhI9MokPBOV3vXJ6HUiovdDdg=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-subscript/-/extension-subscript-2.0.0-beta.209.tgz"
+  "version" "2.0.0-beta.209"
+
+"@tiptap/extension-superscript@^2.0.0-beta.209":
+  "integrity" "sha512-LbGYmels/i8TOiATz4KXFG79JdOkXHU9SWZX+54VnQ3prf2NT5EcTQ4Qx3ASXOzMCYqD+WDlJHOrEWHejSpnKQ=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-superscript/-/extension-superscript-2.0.0-beta.209.tgz"
+  "version" "2.0.0-beta.209"
+
+"@tiptap/extension-text-align@^2.0.0-beta.209":
+  "integrity" "sha512-PbCYNkhxi0oR1N6PgRnG8JoaSJXOvgF8gpEW1RzG8VJNCJPLrhR9/pryHfkszD55XGc4o1F5L+CryRsBJeqsIw=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-text-align/-/extension-text-align-2.0.0-beta.209.tgz"
+  "version" "2.0.0-beta.209"
+
 "@tiptap/extension-text@^2.0.0-beta.209":
   "integrity" "sha512-12PTPTQViDR7xDLwxGMPiYaV89E9olH/+4Zfoh6QiOjHqhmgYu3+/c8YZ3eARgXnfpy/EzUD0PBxiAyDZJ1vdw=="
   "resolved" "https://registry.npmjs.org/@tiptap/extension-text/-/extension-text-2.0.0-beta.209.tgz"
+  "version" "2.0.0-beta.209"
+
+"@tiptap/extension-underline@^2.0.0-beta.209":
+  "integrity" "sha512-xCW0GvCE883l8+YLvDkj5lNdVpqL15uJFMvWP9v79rqlMVZGIFd49saMyAPQworZqepnhnndFOELZ0pHcCV4vQ=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-underline/-/extension-underline-2.0.0-beta.209.tgz"
   "version" "2.0.0-beta.209"
 
 "@tiptap/react@^2.0.0-beta.202", "@tiptap/react@^2.0.0-beta.209":
