@@ -23,3 +23,6 @@ export const NavLinks: HeaderActionProps = {
     },
   ],
 };
+
+// Env Constants
+export const MONGODB_URL = process.env.MONGODB_URL;
