@@ -25,7 +25,10 @@
       ],
       "@Constants": [
         "constants"
-      ]
+      ],
+      "@Schemas": [
+        "Schemas/index"
+      ],
     }
   },
   "include": [
