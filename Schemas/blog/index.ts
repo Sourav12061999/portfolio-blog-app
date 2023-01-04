@@ -1,7 +1,7 @@
 import { Schema, model, Document, models } from "mongoose";
 import { z } from "zod";
 
-export const BlogCardTypeZ = z.object({
+export const BlogTypeZ = z.object({
   htmlContent: z.string().min(10),
   metaData: z.array(
     z.object({
@@ -11,14 +11,14 @@ export const BlogCardTypeZ = z.object({
   ),
 });
 
-export type BlogCardTypes = z.infer<typeof BlogCardTypeZ>;
+export type BlogTypes = z.infer<typeof BlogTypeZ>;
 
-export interface BlogCardTypesMongoose extends BlogCardTypes, Document {}
+export interface BlogTypesMongoose extends BlogTypes, Document {}
 
-const blogSchema: Schema = new Schema<BlogCardTypesMongoose>({
+const blogSchema: Schema = new Schema<BlogTypesMongoose>({
   htmlContent: { type: String, required: true },
   metaData: [{ type: String, required: true }],
 });
 
 export const blogModel =
-  models.blogs || model<BlogCardTypesMongoose>("blogs", blogSchema);
+  models.blogs || model<BlogTypesMongoose>("blogs", blogSchema);
