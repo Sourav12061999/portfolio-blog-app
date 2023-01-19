@@ -12,3 +12,9 @@ export type { CardTypesMongose, BlogTypesMongoose };
 import { CardTypes } from "./card";
 import { BlogTypes } from "./blog";
 export type { CardTypes, BlogTypes };
+
+// Zod Type
+import { CardTypeZ } from "./card";
+import { BlogTypeZ } from "./blog";
+
+export { CardTypeZ, BlogTypeZ };

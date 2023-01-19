@@ -2,7 +2,7 @@ import { Schema, model, Document, models } from "mongoose";
 import { z } from "zod";
 
 export const BlogTypeZ = z.object({
-  htmlContent: z.string().min(10),
+  htmlContent: z.string(),
   metaData: z.array(
     z.object({
       name: z.string().min(1).max(20),
