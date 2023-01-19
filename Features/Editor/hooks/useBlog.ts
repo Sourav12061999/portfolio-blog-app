@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-function useBlog(isEdit?: boolean) {
+function useBlog(blogID: string) {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const dataRef = useRef<string>("");
@@ -9,12 +9,10 @@ function useBlog(isEdit?: boolean) {
     if (dataRef.current.trim() === data.trim()) {
       return;
     }
-    if (isEdit) {
-      // Run Editing Code
-    } else {
-      // Creating Code
-    }
+    // Run Creation Code
   };
+
+  return { isLoading, isError, saveBlog };
 }
 
 export default useBlog;

@@ -12,13 +12,13 @@ import ParaTool from "./Components/Para Tool";
 import HeadingTool from "./Components/Heading Tool";
 import LineTool from "./Components/Line Tool";
 import LinkTool from "./Components/Link Tool";
+import useBlog from "./hooks/useBlog";
 
 interface PropTypes {
   content?: string;
-  isEdit?: boolean;
-  blogId?: string;
+  blogId: string;
 }
-function Editor({ content, isEdit, blogId }: PropTypes) {
+function Editor({ content, blogId }: PropTypes) {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -31,6 +31,7 @@ function Editor({ content, isEdit, blogId }: PropTypes) {
     ],
     content: content || "",
   });
+  const { isLoading, isError, saveBlog } = useBlog(blogId);
 
   return (
     <Box
@@ -40,7 +41,14 @@ function Editor({ content, isEdit, blogId }: PropTypes) {
         alignItems: "flex-end",
       }}
     >
-      <Button mb={"xl"}>Save</Button>
+      <Button
+        onClick={() => {
+          saveBlog(editor?.getHTML() || "");
+        }}
+        mb={"xl"}
+      >
+        Save
+      </Button>
       <Box style={{ width: "100%" }}>
         <RichTextEditor editor={editor}>
           <RichTextEditor.Toolbar sticky stickyOffset={60}>
@@ -51,11 +59,7 @@ function Editor({ content, isEdit, blogId }: PropTypes) {
             <AlignmentTool />
           </RichTextEditor.Toolbar>
 
-          <RichTextEditor.Content
-            onChange={(e) => {
-              console.warn(e.currentTarget);
-            }}
-          />
+          <RichTextEditor.Content />
         </RichTextEditor>
       </Box>
     </Box>
