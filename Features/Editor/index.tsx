@@ -1,4 +1,5 @@
 import { RichTextEditor, Link } from "@mantine/tiptap";
+import { Box, Button } from "@mantine/core";
 import { useEditor } from "@tiptap/react";
 import Highlight from "@tiptap/extension-highlight";
 import StarterKit from "@tiptap/starter-kit";
@@ -14,8 +15,10 @@ import LinkTool from "./Components/Link Tool";
 
 interface PropTypes {
   content?: string;
+  isEdit?: boolean;
+  blogId?: string;
 }
-function Editor({ content }: PropTypes) {
+function Editor({ content, isEdit, blogId }: PropTypes) {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -30,21 +33,32 @@ function Editor({ content }: PropTypes) {
   });
 
   return (
-    <RichTextEditor editor={editor}>
-      <RichTextEditor.Toolbar sticky stickyOffset={60}>
-        <LineTool />
-        <HeadingTool />
-        <ParaTool />
-        <LinkTool />
-        <AlignmentTool />
-      </RichTextEditor.Toolbar>
+    <Box
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-end",
+      }}
+    >
+      <Button mb={"xl"}>Save</Button>
+      <Box style={{ width: "100%" }}>
+        <RichTextEditor editor={editor}>
+          <RichTextEditor.Toolbar sticky stickyOffset={60}>
+            <LineTool />
+            <HeadingTool />
+            <ParaTool />
+            <LinkTool />
+            <AlignmentTool />
+          </RichTextEditor.Toolbar>
 
-      <RichTextEditor.Content
-        onChange={(e) => {
-          console.warn(e.currentTarget);
-        }}
-      />
-    </RichTextEditor>
+          <RichTextEditor.Content
+            onChange={(e) => {
+              console.warn(e.currentTarget);
+            }}
+          />
+        </RichTextEditor>
+      </Box>
+    </Box>
   );
 }
 
