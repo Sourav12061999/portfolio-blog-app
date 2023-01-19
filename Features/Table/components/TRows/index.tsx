@@ -1,11 +1,11 @@
 import {} from "react";
-import { Anchor, Group, Text, Progress } from "@mantine/core";
+import { Anchor, Group, Text, Progress, Badge } from "@mantine/core";
 import useStyles from "../../style";
 import { TableDataTypes } from "Features/Table/index.types";
 function TRows({
   title,
-  author,
-  year,
+  visits,
+  topics,
   reviews: { positive, negative },
 }: TableDataTypes) {
   const { classes, theme } = useStyles();
@@ -19,10 +19,16 @@ function TRows({
           {title}
         </Anchor>
       </td>
-      <td>{year}</td>
+      <td>
+        {topics.map((el) => (
+          <Badge variant="gradient" ml={2}>
+            {el}
+          </Badge>
+        ))}
+      </td>
       <td>
         <Anchor<"a"> size="sm" onClick={(event) => event.preventDefault()}>
-          {author}
+          {visits}
         </Anchor>
       </td>
       <td>{Intl.NumberFormat().format(totalReviews)}</td>

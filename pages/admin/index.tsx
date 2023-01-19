@@ -13,7 +13,9 @@ const Admin: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar links={NavLinks.links} />
-      <Table data={TableData.data} />
+      <main>
+        <Table data={TableData.data} />
+      </main>
     </div>
   );
 };

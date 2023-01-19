@@ -7,6 +7,10 @@ const useStyles = createStyles((theme) => ({
       }`,
     },
   },
+
+  headers: {
+    fontSize: 30,
+  },
 }));
 
 export default useStyles;

@@ -14,6 +14,9 @@ class DB_Connection {
   }
 
   async Connect() {
+    if (this.isConnected) {
+      return;
+    }
     this.isConnecting = true;
     try {
       await connect(this.url);

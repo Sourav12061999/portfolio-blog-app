@@ -3,10 +3,11 @@ export interface ReviewTypes {
   negative: number;
 }
 export interface TableDataTypes {
+  id: string;
   title: string;
-  author: string;
-  year: number;
+  visits: number;
   reviews: ReviewTypes;
+  topics: string[];
 }
 export interface PropTypes {
   data: TableDataTypes[];
