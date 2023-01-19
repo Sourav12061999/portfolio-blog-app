@@ -3,7 +3,7 @@ import { PropTypes } from "./index.types";
 import TRows from "./components/TRows";
 import { Fragment } from "react";
 
-export function TableReviews({ data }: PropTypes) {
+function TableReviews({ data }: PropTypes) {
   return (
     <ScrollArea>
       <Table sx={{ minWidth: 800 }} verticalSpacing="xs">
@@ -27,3 +27,5 @@ export function TableReviews({ data }: PropTypes) {
     </ScrollArea>
   );
 }
+
+export default TableReviews;

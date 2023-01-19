@@ -1,3 +1,3 @@
 import Navbar from "./Navbar";
-
-export { Navbar };
+import TableReviews from "./Table";
+export { Navbar, TableReviews as Table };

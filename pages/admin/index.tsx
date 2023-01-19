@@ -2,6 +2,8 @@ import { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from "@Features";
 import { NavLinks } from "@Constants";
+import { Table } from "@Features";
+import { TableData } from "dummyData";
 const Admin: NextPage = () => {
   return (
     <div>
@@ -11,6 +13,7 @@ const Admin: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar links={NavLinks.links} />
+      <Table data={TableData.data} />
     </div>
   );
 };
