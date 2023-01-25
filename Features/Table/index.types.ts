@@ -3,7 +3,7 @@ export interface ReviewTypes {
   negative: number;
 }
 export interface TableDataTypes {
-  id: string;
+  // id: string;
   title: string;
   visits: number;
   reviews: ReviewTypes;

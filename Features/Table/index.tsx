@@ -5,7 +5,7 @@ import { Fragment } from "react";
 
 function TableReviews({ data }: PropTypes) {
   return (
-    <ScrollArea>
+    <ScrollArea style={{ width: "100%" }}>
       <Table
         fontSize={20}
         withBorder
