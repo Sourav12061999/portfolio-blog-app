@@ -6,10 +6,24 @@ import { NavLinks } from "@Constants";
 import { Table } from "@Features";
 import { TableData } from "dummyData";
 import { Button } from "@mantine/core";
-import BlogModal from "Features/Blog Modal";
+import { backendURL } from "@Constants";
+import BlogModal, { BlogDataType } from "Features/Blog Modal";
 
 const Admin: NextPage = () => {
   const [isOpened, setIsOpened] = useState(false);
+  const [tableData, setTableData] = useState(TableData.data);
+  const onCreateBlog = async (params: BlogDataType) => {
+    try {
+      let res = await fetch(`${backendURL}/`);
+      let data = await res.json();
+
+      if (!data.isError) {
+        setTableData((prev) => [...prev, data.data]);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <div>
       <Head>
@@ -25,15 +39,8 @@ const Admin: NextPage = () => {
           alignItems: "flex-end",
         }}
       >
-        <Button
-          mb={"md"}
-          style={{ width: "100px" }}
-          onClick={() => setIsOpened(true)}
-        >
-          Create
-        </Button>
-        <Table data={TableData.data} />
-        <BlogModal isOpened={isOpened} setIsOpened={setIsOpened} />
+        <BlogModal />
+        <Table data={tableData} />
       </main>
     </div>
   );
