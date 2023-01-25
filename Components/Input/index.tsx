@@ -37,7 +37,7 @@ function InputComp({
 
   return (
     <TextInput
-      mt="xl"
+      mb="xl"
       onChange={(e) => {
         onChange(e, stateKey);
       }}

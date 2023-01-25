@@ -1,6 +1,8 @@
 import { ChangeEvent } from "react";
-import { Modal, Textarea } from "@mantine/core";
+import { Button, Modal, Textarea, MultiSelect } from "@mantine/core";
 import Input from "Components/Input";
+import { Topics } from "@Constants";
+import { IconSelectOption, IconSelectChips } from "Components/Icon Select";
 
 interface PropTypes {
   isOpened: boolean;
@@ -33,6 +35,20 @@ function BlogModal({ isOpened, setIsOpened }: PropTypes) {
         minRows={4}
         maxRows={10}
       />
+      <MultiSelect
+        data={Topics}
+        limit={20}
+        valueComponent={IconSelectOption}
+        itemComponent={IconSelectChips}
+        searchable
+        defaultValue={["Javascript"]}
+        placeholder="Pick topics"
+        label="Topics of your blog"
+        // {...props}
+      />
+      <Button mt={"lg"} fullWidth>
+        Submit
+      </Button>
     </Modal>
   );
 }
